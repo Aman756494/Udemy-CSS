@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      body {
+        height: 100%;
+        /* width:100vw ; */
+        background-color: #1a1a1a;
+        border: 2px solid#fff;
+        color: #fff;
+      }
+
+      .carousel{
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        max-width: none;
+      }
+
+        .carousel-container{
+            border: 2px solid#fff;
+            border-radius: 12px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            overflow: hidden;
+        }
+        
+      .carousel .carousel-container{
+        display: flex;
+        height: 100%;
+        width: 100%;
+      }
+
+        .image-row{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:10px;
+        }
+
+        .image-row img{
+        width: 100%;
+        height: 43vh;
+        object-fit: cover;
+        flex-shrink: 0;
+}
+
+  @media(max-width:768px) {
+       .image-row{
+           grid-template-columns: 1fr;
+       }
+  }
+
+  .card-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 20px;
+     
+  }
+
+  .card{
+    border: 2px solid#fff;
+    text-align: center;
+    gap:30px;
+    padding: 0px;
+    border-radius: 5px;
+    overflow:hidden;
+    height: 48vh;
+    
+  }
+
+  .card img{
+    object-fit:cover;
+    height: 40vh;
+    flex-shrink: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+   
+  }
+
+  @media(max-width:768px){
+    .card-grid{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card .btn{
+    color: #fff;
+    padding: 8px;
+    border: 2px solid#fff;
+    border-radius: 10px;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    background-color:#1e3a5f ;
+  }
+
+  .btn:hover{
+    background-color:#1a1a1a;
+    transform: scale(1.05) translateX(-2px);
+  }
+
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+    </style>
+  </head>
+
+  <body>
+    <div class="carousel">
+      <div class="carousel-container">
+        <div class="image-row">
+            <img src="/pexel1.jpg" alt="">
+            <img src="/pexel2.jpg" alt="">
+            <img src="/pexel3.jpg" alt="">
+        </div>
+      </div>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <img src="/youtube1.webp" alt="" />
+        <a href="https://youtu.be/cuf1H1bC5g0?si=Uv9dpRsxM5Cxv9hY" target="_blank" class="btn">
+          Watch Now
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="/youtube2.webp" alt="" />
+        <a href="https://youtu.be/kSm1yEE6-oY?si=KTQ5yZuva48vhoaq" target="_blank" class="btn">
+          Watch Now
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="/youtube3.webp" alt="" />
+        <a href="https://youtu.be/MZI7L991634?si=QE7JniQxQxDNQDq_" target="_blank" class="btn">
+          Watch Now
+        </a>
+      </div>
+      </div>
+      <div class="footer">
+        <p>&copy; - All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>
